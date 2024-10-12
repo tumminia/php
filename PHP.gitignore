@@ -1,0 +1,12 @@
+# ignore ALL file *.php except index.php, cookie.php and cap.php
+*.php
+!cap.php
+!cookie.php
+!index.php
+!fireworks.php
+
+# ignore ALL files in ANY directory named keystore
+keystore/
+
+# ignore ALL files in ANY directory named config 
+config/
