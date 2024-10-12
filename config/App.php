@@ -1,7 +1,7 @@
 <?php
 class App {
     public function run() {
-        $path = "/gitproject";
+        $path = "/php";
         if(empty($_SESSION['XSRF-TOKEN'])) {
             $_SESSION['XSRF-TOKEN'] = $this->tokenCsrf();
         }
