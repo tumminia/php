@@ -1,0 +1,8 @@
+{
+  "short_name": "Git",
+  "name": "Git project Web Docs",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#293133",
+  "background_color": "#f2f3f4"
+}
