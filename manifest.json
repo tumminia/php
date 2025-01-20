@@ -1,8 +1,15 @@
 {
   "short_name": "Git",
   "name": "Git project Web Docs",
-  "start_url": ".",
+  "start_url": "/php",
+  "icons": [
+    {
+      "src": "/php/css/Spiga.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
   "display": "standalone",
-  "theme_color": "#293133",
+  "theme_color": "rgb(0,0,0)",
   "background_color": "#f2f3f4"
 }
