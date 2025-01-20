@@ -1,4 +1,4 @@
-::-webkit-scrollbar{width:8px;}
+::-webkit-scrollbar{width:16px;}
 ::-webkit-scrollbar-track{border-radius:10px;}
 ::-webkit-scrollbar-thumb{background:#B2B2B2;border-radius:10px;}
 ::selection{background:pink;color:black;}
@@ -24,26 +24,27 @@ table,tr,th,td{border:1px solid #DCDCDC;padding:10px;}
 #cap{width:300px;margin:auto;margin-top:30px;display:block;}
 input[type="text"]{width:100%;height:50px;border-radius:5px;margin-top:10px;margin-bottom:10px;}
 input[type="text"]{background:#F2F3F4;padding:10px;}
-input[type="text"]:focus{box-shadow:0 0 0 5px rgba(0,128,128,0.3);border-color:#DCDCDC;}
-#button_comune{background:teal;color:#F2F3F4;width:100%;height:50px;border-radius:5px;margin-top:10px;}
-#button_comune{border:3px solid teal;}
-#button_comune:hover{background:#F2F3F4;color:teal;}
+input[type="text"]:focus{box-shadow:0 0 0 5px rgba(0,128,0,0.3);border-color:#DCDCDC;}
+
+#button_comune{background:green;color:#F2F3F4;width:100%;height:50px;border-radius:5px;margin-top:10px;}
+#button_comune{border:3px solid green;}
+#button_comune:hover{background:#F2F3F4;color:green;}
 
 /** CookieContainer **/
 #cookieContainer{display:none;}
 #cookieContainer label{display:block;}
-#cookieContainer{left:30%;right:30%;top:10%;width:40%;background:#F2F3F4;color:rgb(0,128,128);position:fixed;border-radius:5px;z-index:3;}
-#cookieContainer{box-shadow:0 0 10px 10px rgba(0,128,128,0.1);}
+#cookieContainer{left:30%;right:30%;top:10%;width:40%;background:#F2F3F4;color:rgb(0,0,0);position:fixed;border-radius:5px;z-index:3;}
+#cookieContainer{box-shadow:0 0 10px 10px rgba(0,0,0,0.1);}
 #cookieContainer div{margin:0 auto;text-align:center;}
 #cookieContainer p{text-align:left;padding-left:30px;}
-#accettaCookie{background:#008080;color:#F2F3F4;outline:5px outset #008080;border-radius:5px;border-color:#F2F3F4;margin:20px;}
+#accettaCookie{background:green;color:#F2F3F4;width:100px;padding:10px;border-radius:5px;border-color:green;margin:20px;}
 #all,#necessary{cursor:pointer;height:18px;width:18px;margin-left:10px;margin-right:10px;}
 #all,#necessary{border-radius:50%;}
 #cookieContainer hr{border:2px outset #F2F3F4;}
 #cookieContainer h4{margin-top:10%;}
-#accettaCookie:hover{background:#0047AB;color:#F2F3F4;outline:5px outset #0047AB;border-color:#F2F3F4;}
-#lang{background:rgb(242,243,244);color:rgb(0,128,128);border-radius:10px;border-color:rgb(0,128,128);}
+#accettaCookie:hover{background:#F2F3F4;color:green;}
+#lang{background:rgb(242,243,244);color:rgb(0,128,0);border-radius:10px;border-color:rgb(0,128,0);}
 #lang{border-style:none;}
 
 /** FOOTER **/
-footer{text-align:center;padding:20px;background:rgb(0, 128, 128);color:#F2F3F4; position:fixed;bottom: 0; width: 100%;height:50px;}
+footer{text-align:center;padding:20px;background:rgb(0, 128, 0);color:#F2F3F4; position:fixed;bottom: 0; width: 100%;height:50px;}
