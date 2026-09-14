@@ -14,7 +14,7 @@ var my = [];
 //ajax.responseType = "json";
 ajax.open("POST", "/gitproject/cap.php",true);
 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-ajax.send("comune="+input);
+ajax.send(`comune=${input}`);
 ajax.onload = function() {
     const object = JSON.parse(this.responseText);
 
