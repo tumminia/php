@@ -55,9 +55,6 @@ function run() {
         alert(`Errore: il comune ${input} non presente nel database`);
       } 
     }
-
-    document.getElementById("ajax").innerHTML = tag;
-    //$("#ajax").append(tag);
   }
 
   dataset.open("POST", "/gitproject/cap.php",true);
