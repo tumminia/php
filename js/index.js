@@ -9,28 +9,25 @@ $(function() {
 
 const ajax = new XMLHttpRequest();
 var input = "Roma";
-let tag = "";
 var my = [];
 
 //ajax.responseType = "json";
-ajax.open("POST", "/php/cap.php",true);
+ajax.open("POST", "/gitproject/cap.php",true);
 ajax.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 ajax.send("comune="+input);
 ajax.onload = function() {
     const object = JSON.parse(this.responseText);
 
     for(var item in object) {
-        tag +=
-        "<tr>" +
-        "<td>" + object[item].comune + "</td>" +
-        "<td>" + object[item].cap + "</td>" +
-        "<td style='text-align:center;'>" + object[item].provincia + "</td>" +
-        "<td>" + object[item].regione + "</td>" +
-        "</tr>"
-        ;
+      $("#ajax").append(
+        $("<tr>").append(
+          $("<td>").text(object[item].comune),
+          $("<td>").text(object[item].cap),
+          $("<td>").text(object[item].provincia),
+          $("<td>").text(object[item].regione)
+        )
+      );
     }
-
-    document.getElementById("ajax").innerHTML = tag;
 }
 
 const button_comune = document.getElementById("button_comune");
@@ -46,16 +43,16 @@ function run() {
 
     for(var item in object) {
       if(object[item].Comune!="Errore") {
-        tag +=
-        "<tr>" +
-        "<td>" + object[item].comune + "</td>" +
-        "<td>" + object[item].cap + "</td>" +
-        "<td style='text-align:center;'>" + object[item].provincia + "</td>" +
-        "<td>" + object[item].regione + "</td>" +
-        "</tr>"
-        ;
+        $("#ajax").append(
+          $("<tr>").append(
+            $("<td>").text(object[item].comune),
+            $("<td>").text(object[item].cap),
+            $("<td>").text(object[item].provincia),
+            $("<td>").text(object[item].regione)
+          )
+        );
       } else if(input!=""){
-        alert("Errore: il comune "+input+" non presente nel database");
+        alert(`Errore: il comune ${input} non presente nel database`);
       } 
     }
 
@@ -63,15 +60,14 @@ function run() {
     //$("#ajax").append(tag);
   }
 
-  dataset.open("POST", "/php/cap.php",true);
+  dataset.open("POST", "/gitproject/cap.php",true);
   dataset.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   dataset.send("comune="+input);
 }
 
 $(function(){
   $("#reset").on("click",()=>{
-    tag = "";
-    $("#ajax").html(tag);
+    $("#ajax").html("");
     //$("#cap").find("form").trigger("reset");
     inputComune.value = "";
   });
