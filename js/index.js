@@ -59,7 +59,7 @@ function run() {
 
   dataset.open("POST", "/gitproject/cap.php",true);
   dataset.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-  dataset.send("comune="+input);
+  dataset.send(`comune=${input}`);
 }
 
 $(function(){
