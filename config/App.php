@@ -55,7 +55,9 @@ class App {
 
         $st->close();
         $con->close();
-        return json_encode($json);
+        
+        header('Content-Type: application/json; charset=utf-8');
+        return json_encode($json, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
     }
 
     public function queryPG($ingrediente) {
